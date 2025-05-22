@@ -1,0 +1,8 @@
+name: workflow-reuse
+on: workflow_call
+jobs:
+    first:
+        runs-on: ubuntu-latest
+        steps: 
+        - name: step1
+          run: echo 'hoho'
