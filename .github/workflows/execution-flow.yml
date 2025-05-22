@@ -75,3 +75,8 @@ jobs:
         run: ls
       - name: Deploy
         run: echo "Deploying..."
+  dodo:
+    runs-on: ubuntu-latest
+    steps:
+     - name: first
+       run: echo 'hello'
