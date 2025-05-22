@@ -77,7 +77,8 @@ jobs:
         run: echo "Deploying..."
   dodo:
     runs-on: ubuntu-latest
-    if: failure()
+    needs: [deploy,test]
+    if: failure() 
     steps:
      - name: first
        run: echo 'hello'
