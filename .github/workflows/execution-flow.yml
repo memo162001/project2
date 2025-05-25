@@ -34,7 +34,7 @@ jobs:
      
   build:
     
-    if: success()
+    
 
     runs-on: ubuntu-latest
     steps:
