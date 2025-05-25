@@ -24,11 +24,17 @@ jobs:
       - name: Lint code
         run: npm run lint
 
-
+  test:
+    runs-on: ubuntu-latest
+    needs: lint
+    if: failure()
+    steps:
+      - name: print failed
+        run: echo 'failed'
      
   build:
     
-    if: failure()
+    if: success()
 
     runs-on: ubuntu-latest
     steps:
